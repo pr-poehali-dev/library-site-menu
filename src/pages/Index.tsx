@@ -3,6 +3,7 @@ import SearchBar from "@/components/SearchBar";
 import BookCard from "@/components/BookCard";
 import NewsSection from "@/components/NewsSection";
 import LibrarySidebar from "@/components/LibrarySidebar";
+import ThemeToggle from "@/components/ThemeToggle";
 import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
 
@@ -162,6 +163,44 @@ const Index = () => {
 
             <div className="bg-purple-50 rounded-lg p-8">
               <h3 className="text-2xl font-semibold text-gray-900 mb-6 text-center">
+                Наша команда
+              </h3>
+              <div className="grid md:grid-cols-3 gap-6">
+                <div className="text-center">
+                  <div className="w-24 h-24 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+                    <Icon name="User" size={32} className="text-white" />
+                  </div>
+                  <h4 className="font-semibold text-gray-900">Анна Петрова</h4>
+                  <p className="text-sm text-gray-600">Главный библиотекарь</p>
+                  <p className="text-xs text-gray-500 mt-1">Стаж: 25 лет</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-24 h-24 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+                    <Icon name="User" size={32} className="text-white" />
+                  </div>
+                  <h4 className="font-semibold text-gray-900">Михаил Иванов</h4>
+                  <p className="text-sm text-gray-600">
+                    Заведующий читальным залом
+                  </p>
+                  <p className="text-xs text-gray-500 mt-1">Стаж: 15 лет</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-24 h-24 bg-gradient-to-br from-green-400 to-green-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+                    <Icon name="User" size={32} className="text-white" />
+                  </div>
+                  <h4 className="font-semibold text-gray-900">
+                    Елена Сидорова
+                  </h4>
+                  <p className="text-sm text-gray-600">
+                    Библиотекарь детского отдела
+                  </p>
+                  <p className="text-xs text-gray-500 mt-1">Стаж: 12 лет</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-purple-50 rounded-lg p-8">
+              <h3 className="text-2xl font-semibold text-gray-900 mb-6 text-center">
                 Статистика
               </h3>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
@@ -210,10 +249,12 @@ const Index = () => {
                     variant="outline"
                     className="w-full justify-start gap-2"
                   >
-                    <Icon name="Key" size={16} />
-                    Изменить пароль
+                    <Icon name="Palette" size={16} />
+                    Тема оформления
                   </Button>
                 </div>
+                <div className="pt-2">
+                  <ThemeToggle />
               </div>
 
               <div className="bg-white rounded-lg border p-6">
@@ -275,7 +316,7 @@ const Index = () => {
         onSectionChange={setCurrentSection}
       />
 
-      <div className="container mx-auto px-4 py-8 pr-20">{renderContent()}</div>
+      <div className="container mx-auto px-4 py-8 pl-20">{renderContent()}</div>
     </div>
   );
 };

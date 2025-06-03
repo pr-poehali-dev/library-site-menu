@@ -30,13 +30,13 @@ const LibrarySidebar = ({ onSectionChange, currentSection }: SidebarProps) => {
         <Button
           variant="outline"
           size="icon"
-          className="fixed top-4 right-4 z-50 bg-white shadow-lg hover:shadow-xl transition-shadow"
+          className="fixed top-4 left-4 z-50 bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl transition-shadow"
         >
           <Icon name="Menu" size={20} />
         </Button>
       </SheetTrigger>
 
-      <SheetContent side="right" className="w-80 p-0">
+      <SheetContent side="left" className="w-80 p-0">
         <SheetHeader className="p-6 bg-gradient-to-br from-purple-600 to-purple-700 text-white">
           <SheetTitle className="text-xl font-bold flex items-center gap-2">
             <Icon name="Library" size={24} />
