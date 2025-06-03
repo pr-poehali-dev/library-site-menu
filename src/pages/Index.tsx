@@ -255,6 +255,7 @@ const Index = () => {
                 </div>
                 <div className="pt-2">
                   <ThemeToggle />
+                </div>
               </div>
 
               <div className="bg-white rounded-lg border p-6">
