@@ -245,13 +245,6 @@ const Index = () => {
                     <Icon name="User" size={16} />
                     Редактировать профиль
                   </Button>
-                  <Button
-                    variant="outline"
-                    className="w-full justify-start gap-2"
-                  >
-                    <Icon name="Palette" size={16} />
-                    Тема оформления
-                  </Button>
                 </div>
                 <div className="pt-2">
                   <ThemeToggle />
